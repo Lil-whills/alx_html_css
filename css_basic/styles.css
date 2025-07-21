@@ -4,23 +4,111 @@ body {
   flex-direction: column;
   height: 100vh; /* Optional: full screen height */
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  margin: 0;
+  color: #333;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d6efd;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header, main, footer {
+  padding: 1rem;
+}
+header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header li {
+  margin-right: 1rem;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+header a:hover {
+  color: #ffc107;
+}
 /* Make <main> a flex container with horizontal layout */
 main {
   display: flex;
   flex-direction: row;
   flex: auto; /* So it grows to fill space between header and footer */
+  gap: 2rem;
+  padding: 2rem;
 }
 
 /* Make <article> take 2/3 of the space */
 article {
   flex: 2;
   overflow-y: auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.06);
 }
-
+article h1, article h2 {
+  color: #0d6efd;
+}
+article p {
+  margin-bottom: 1rem;
+}
 /* Make <aside> take 1/3 of the space */
 aside {
   flex: 1;
   overflow-y: auto;
+  background-color: #f1f3f5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
 }
+
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+  color: crimson;
+  margin-right: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-right: 2rem;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #212529;
+  color: #dee2e6;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+
+a.button {
+  background-color: #0d6efd;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+  background-color: #0b5ed7;
+}
+
